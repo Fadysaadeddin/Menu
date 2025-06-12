@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../assets/logo.png"; // Adjust the path according to your logo location
 import "../styles/homeHeader.css"; // Adjust the path according to your CSS file location
 
-const HomeHeader = () => {
+ const HomeHeader = () => {
   return (
     <header className="header">
       <div className="header-content">

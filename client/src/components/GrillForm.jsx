@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "../styles/pizzaForm.css";
+import "../styles/grillForm.css";
 
- const PizzaForm = ({ onClose }) => {
+const GrillForm = ({ onClose }) => {
   const [formData, setFormData] = useState({
     name: "",
     description: "",
@@ -12,7 +12,7 @@ import "../styles/pizzaForm.css";
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/api/pizzas", {
+      const response = await fetch("http://localhost:5000/api/grills", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -21,14 +21,14 @@ import "../styles/pizzaForm.css";
       });
 
       if (response.ok) {
-        alert("Pizza created successfully!");
+        alert("Grill created successfully!");
         onClose();
       } else {
         const error = await response.json();
         alert(`Error: ${error.message}`);
       }
     } catch (error) {
-      alert("Error creating pizza");
+      alert("Error creating grill");
       console.error("Error:", error);
     }
   };
@@ -43,7 +43,7 @@ import "../styles/pizzaForm.css";
   return (
     <div className="popup-overlay">
       <div className="popup-content">
-        <h2>Add New Pizza</h2>
+        <h2>Add New Grill</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label>Name:</label>
@@ -96,4 +96,4 @@ import "../styles/pizzaForm.css";
   );
 };
 
-export default PizzaForm;
+export default GrillForm;
