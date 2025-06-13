@@ -1,12 +1,15 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
-const grillSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  description: { type: String, required: true },
-  price: { type: Number, required: true },
-  imageUrl: { type: String, required: true }
-}, {
-  timestamps: true
-});
+const grillSchema = new mongoose.Schema(
+  {
+    name: { type: String, required: true },
+    description: { type: String, required: true },
+    price: { type: Number, required: true },
+    imageUrl: { type: String, required: true },
+  },
+  {
+    timestamps: true,
+  }
+);
 
-export default mongoose.model('Grill', grillSchema);
+export default mongoose.model("Grill", grillSchema);
