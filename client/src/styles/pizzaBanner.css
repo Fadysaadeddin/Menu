@@ -138,3 +138,20 @@ body {
 .delete-category-btn:hover {
   background-color: #a71d2a;
 }
+
+.add-item-btn {
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: background 0.2s;
+}
+
+.add-item-btn:hover {
+  background-color: #1e7e34;
+}
