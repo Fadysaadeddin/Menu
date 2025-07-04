@@ -1,0 +1,140 @@
+.pizza-banner {
+  width: 100vw;
+  overflow: hidden;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.pizza-banner-img {
+  width: 100vw;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  opacity: 0.7; /* Control only the image opacity */
+}
+
+.pizza-banner-content {
+  position: absolute;
+  top: 20%;
+  left: 3vw;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.pizza-banner-title {
+  color: #b22222;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  text-shadow: 0 2px 8px #fff, 0 0 10px #fff;
+  /* Responsive adjustments */
+  max-width: 40vw;
+  line-height: 1.1;
+}
+
+.add-category-btn {
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: background 0.2s;
+}
+
+.add-category-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Prevent horizontal scroll on the body */
+body {
+  overflow-x: hidden;
+}
+
+.category-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-popup {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
+  min-width: 300px;
+  text-align: center;
+}
+
+.category-popup h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #b22222;
+}
+
+.category-input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.popup-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.popup-actions button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.popup-actions button[type="submit"] {
+  background: #007bff;
+  color: #fff;
+}
+
+.popup-actions button[type="button"] {
+  background: #ccc;
+  color: #333;
+}
+
+.banner-btn-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.delete-category-btn {
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: background 0.2s;
+}
+
+.delete-category-btn:hover {
+  background-color: #a71d2a;
+}

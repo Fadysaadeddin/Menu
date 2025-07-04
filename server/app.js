@@ -3,8 +3,8 @@ import express from "express";
 import cors from "cors";
 import connectDB from "./config/db.js";
 
-import pizzaRoutes from "./routes/pizzaRoutes.js";
-import grillRoutes from './routes/grillRoutes.js';
+
+import categoryRoutes from "./routes/categoryRoutes.js";
 const app = express();
 
 // Connect to DB
@@ -16,7 +16,7 @@ app.use(express.json());
 
 // Routes
 
-app.use("/api/pizzas", pizzaRoutes);
-app.use('/api/grills', grillRoutes);
+
+app.use("/api/categories", categoryRoutes);
 
 export default app;
