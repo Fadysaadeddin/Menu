@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   gap: 2rem;
   padding: 2rem 0;
-  justify-content: center;
+  justify-content: flex-start; /* Changed from center to flex-start */
 }
 
 .item-card {
