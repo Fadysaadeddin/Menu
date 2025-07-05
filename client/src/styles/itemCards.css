@@ -7,6 +7,7 @@
 }
 
 .item-card {
+  position: relative; /* Needed for absolute positioning */
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -41,4 +42,35 @@
   color: #007bff;
   font-size: 1.2rem;
   margin-top: 0.5rem;
+}
+
+.item-card-plus {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  font-size: 1.7rem;
+  color: #28a745;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+
+.item-card-plus:hover {
+  color: #155724;
+}
+
+.item-card-badge {
+  background: #dc3545;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+  padding: 0.15em 0.6em;
+  font-weight: bold;
+  position: relative;
+  top: -6px;
 }

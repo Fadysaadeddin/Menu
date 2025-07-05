@@ -3,6 +3,7 @@
   overflow: hidden;
   margin-top: 0;
   margin-bottom: 0;
+  position: relative; /* Added to position the basket icon */
 }
 
 .pizza-banner-img {
@@ -154,4 +155,28 @@ body {
 
 .add-item-btn:hover {
   background-color: #1e7e34;
+}
+
+.pizza-banner-basket {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.basket-badge {
+  position: absolute;
+  top: -8px;
+  right: -14px;
+  background: #dc3545;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.2em 0.6em;
+  z-index: 4;
+  pointer-events: none;
 }

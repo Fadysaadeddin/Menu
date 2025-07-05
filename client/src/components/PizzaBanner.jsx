@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import pizzaImg from "../assets/pizza1.jpeg"; // Adjust path if needed
 import "../styles/pizzaBanner.css";
+import { FaShoppingBasket } from "react-icons/fa";
 
-const PizzaBanner = ({ onCategoryAdded }) => {
+const PizzaBanner = ({ onCategoryAdded, basketCount }) => {
   const [showAddPopup, setShowAddPopup] = useState(false);
   const [showDeletePopup, setShowDeletePopup] = useState(false);
   const [showAddItemPopup, setShowAddItemPopup] = useState(false);
@@ -124,6 +125,10 @@ const PizzaBanner = ({ onCategoryAdded }) => {
 
   return (
     <div className="pizza-banner">
+      <div className="pizza-banner-basket">
+        <FaShoppingBasket size={40} color="#28a745" />
+        {basketCount > 0 && <span className="basket-badge">{basketCount}</span>}
+      </div>
       <img src={pizzaImg} alt="Pizza" className="pizza-banner-img" />
       <div className="pizza-banner-content">
         <h1 className="pizza-banner-title">
